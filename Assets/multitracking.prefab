@@ -2972,7 +2972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModuleType: multitracking
   ModuleDisplayName: Multitracking
-  RequiresTimerVisibility: 0
+  RequiresTimerVisibility: 1
 --- !u!114 &114225232700103900
 MonoBehaviour:
   m_ObjectHideFlags: 1
