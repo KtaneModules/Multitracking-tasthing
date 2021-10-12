@@ -91,17 +91,17 @@ public class multitracking : MonoBehaviour
             return;
         var submittedTime = ((int)bomb.GetTime()) % 10;
         if (stage != 7)
-            Debug.LogFormat("[Mutlitracking #{0}] Submitted on a {1}.", moduleId, submittedTime);
+            Debug.LogFormat("[Multitracking #{0}] Submitted on a {1}.", moduleId, submittedTime);
         if (ix != 7)
         {
             if (invalidTimes.Contains(submittedTime))
             {
-                Debug.LogFormat("[Mutlitracking #{0}] That was an invalid digit. Strike!", moduleId);
+                Debug.LogFormat("[Multitracking #{0}] That was an invalid digit. Strike!", moduleId);
                 module.HandleStrike();
             }
             else
             {
-                Debug.LogFormat("[Mutlitracking #{0}] That was a valid digit. Progressing...", moduleId);
+                Debug.LogFormat("[Multitracking #{0}] That was a valid digit. Progressing...", moduleId);
                 covers[stage].SetActive(false);
                 audio.PlaySoundAtTransform("break" + rnd.Range(1, 4), covers[stage].transform);
                 stage++;
