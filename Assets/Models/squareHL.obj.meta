@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 247ffa5f6b6960d489bbad07bc2fc693
+guid: d9bbed48708f9244e9008ab0e6d3c7e7
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: deafShape+
+    100000: highlight
+    100002: //RootNode
+    400000: highlight
+    400002: //RootNode
+    2100000: highlightMat
+    2300000: highlight
+    3300000: highlight
+    4300000: highlight
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -38,7 +41,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

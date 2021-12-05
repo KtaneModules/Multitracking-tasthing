@@ -20,7 +20,7 @@ public class multitracking : MonoBehaviour
     public Texture[] printTextures;
     public GameObject statusLight;
     public GameObject[] covers;
-    public Mesh plusMesh;
+    public Mesh hlMesh;
 
     private int[] displayedPrints;
     private int solutionPrint;
@@ -107,7 +107,7 @@ public class multitracking : MonoBehaviour
                 stage++;
                 var hclone = buttons[stage].Highlight.transform.Find("Highlight(Clone)");
                 if (hclone != null)
-                    hclone.GetComponent<MeshFilter>().mesh = plusMesh;
+                    hclone.GetComponent<MeshFilter>().mesh = hlMesh;
                 if (stage != 7)
                     GenerateStage();
                 else
