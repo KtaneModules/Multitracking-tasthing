@@ -52,7 +52,7 @@ public class multitracking : MonoBehaviour
             dirt.material.mainTextureOffset = new Vector2(rnd.Range(0f, 1f), rnd.Range(0f, 1f));
         }
         var listA = GetRectangle();
-    tryAgain:
+        tryAgain:
         var listB = GetRectangle();
         if (listB.Any(x => listA.Contains(x)))
             goto tryAgain;
@@ -206,14 +206,11 @@ public class multitracking : MonoBehaviour
         var digits = "0123456789".Select(x => x.ToString()).ToArray();
         if (!digits.Contains(input))
             yield break;
-        else
-        {
-            var ix = Array.IndexOf(digits, input);
-            while (((int)bomb.GetTime()) % 10 != ix)
-                yield return "trycancel";
-            yield return null;
-            buttons[stage].OnInteract();
-        }
+        yield return null;
+        var ix = Array.IndexOf(digits, input);
+        while (((int)bomb.GetTime()) % 10 != ix)
+            yield return "trycancel";
+        buttons[stage].OnInteract();
     }
 
     private IEnumerator TwitchHandleForcedSolve()
